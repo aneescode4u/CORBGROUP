@@ -233,7 +233,7 @@ app.post('/send', (req, res) => {
       res.render('contact', {msg:'Email has been sent'});
   });
   });
- app.listen(process.env.PORT,process.env.IP,function(req,res){
+ app.listen(process.env.PORT||3000,function(req,res){
      console.log("The Yelpcamp has Started");
      
  })
