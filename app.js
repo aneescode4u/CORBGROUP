@@ -22,7 +22,7 @@ app.use(require("express-session")({
 app.use(bodyParser.urlencoded({extended:true}));
 
 var url = require('url');
-var PORT = 3000;
+var PORT = 80;
 app.use(express.static("./app/public"));
 
 app.use(express.static("public"));
@@ -233,7 +233,7 @@ app.post('/send', (req, res) => {
       res.render('contact', {msg:'Email has been sent'});
   });
   });
- app.listen(process.env.PORT||3000,function(req,res){
+ app.listen(process.env.PORT||80,function(req,res){
      console.log("The Yelpcamp has Started");
      
  })
