@@ -209,7 +209,7 @@ app.post('/send', (req, res) => {
     port: 587,
     auth: {
         user: 'anees.krtn@gmail.com',
-        pass: '3@zainaba'
+        pass: '2@zaIba'
     }
 });
   
