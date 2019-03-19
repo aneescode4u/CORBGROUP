@@ -73,7 +73,10 @@ app.get("/products",function(req,res){
  app.get("/contents",function(req,res){
  res.render("contents.ejs")});
  
- 
+app.get("/google553b680f2943821a.html",function(req,res){
+ res.sendFile(__dirname+"/google553b680f2943821a.html");
+})
+  
  
  
  
