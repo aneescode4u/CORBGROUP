@@ -1,6 +1,6 @@
 var express=require("express");
 var app=express();
-
+var mongoose=require("mongoose");
 var passport=require("passport");
 const nodemailer = require('nodemailer');
 const exphbs = require('express-handlebars');
@@ -8,7 +8,7 @@ var bodyParser=require("body-parser");
 var User=require("./model/user");
 
 var LocalStrategy=require("passport-local");
-
+var passportLocalMongoose=require("passport-local-mongoose");
 
 
 app.use(require("express-session")({
@@ -17,7 +17,7 @@ app.use(require("express-session")({
  saveUninitialized:false
 }));
 
-
+mongoose.connect("mongodb://localhost/auth_demo_app");
 
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -73,10 +73,12 @@ app.get("/products",function(req,res){
  app.get("/contents",function(req,res){
  res.render("contents.ejs")});
  
-app.get("/google553b680f2943821a.html",function(req,res){
+ app.get("/google553b680f2943821a.html",function(req,res){
  res.sendFile(__dirname+"/google553b680f2943821a.html");
 })
   
+ 
+ 
  
  
  
