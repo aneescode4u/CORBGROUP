@@ -209,15 +209,15 @@ app.post('/send', (req, res) => {
     port: 587,
     auth: {
         user: 'anees.krtn@gmail.com',
-        pass: '2@zaIba'
+        pass: '3@zainaba'
     }
 });
   
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Nodemailer Contact" <anees.krtn@gmail.com>', // sender address
+      from: '"Corbital-ContactUs Request" <anees.krtn@gmail.com>', // sender address
       to: 'anees.krtn@gmail.com', // list of receivers
-      subject: 'Node Contact Request', // Subject line
+      subject: 'ContactUs Request', // Subject line
       text: 'Hello world?', // plain text body
       html: output // html body
   };
